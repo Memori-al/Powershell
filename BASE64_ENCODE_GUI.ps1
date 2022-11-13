@@ -4,7 +4,7 @@
 # 2 번 파일은 AES 암호화 스크립트
 # 회원가입 시 비밀번호를 sha256 암호화, DB 저장
 # 로그인 시 입력한 비밀번호를 sha256 암호화, DB 비밀번호와 일치 시 Login Success.
-# Authentication 기능은 인트라넷 특성상 Mysql DB 사용이 용이하지 않고, 데이터 양이 적으므로 csv 혹은 txt 방식의 DB 를 사용함.
+# Authentication 기능은 인트라넷 특성상 DBMS 사용이 용이하지 않고, 데이터 수가 적으므로 csv 혹은 txt 방식의 DB 를 사용함.
 
 Add-type -AssemblyName System.Windows.Forms
 Add-type -AssemblyName System.drawing
