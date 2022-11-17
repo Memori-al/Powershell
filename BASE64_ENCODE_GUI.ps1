@@ -10,8 +10,7 @@
 # 난독화 데이터에 전자서명을 추가해 본인 소유 외 데이터 복호화 불가하게 설계
 # 전자서명은 사용자명 난독화 후 임의의 배열에 삽입, 배열 위치는 관리자 서버에 저장
 # 사용자 정보에 대한 보안이 취약하지만, 속도가 매우 빠르기 때문에 보안 걱정이 없는 내부망에서 간단히 사용하기 용이함.
-# 보안 고려 시 설계 방안 1) 서버 구축 후 Client 에서 서버에 API 요청 시 결과 값을 반환하도록 구성.
-# 보안 고려 시 설계 방안 1-1) DBMS를 사용하지 않아도 간단히 구현이 가능함.
+# 보안 고려 시 설계 방안 1) 서버 구축 후 Client가 서버에 API Request, 결과 값을 Response 하도록 구성. API Request 시 적법한 통신인지 검증 후 Response 함. Protocol Authentication
 # DATE [2021-08-10] #
 
 Add-type -AssemblyName System.Windows.Forms
