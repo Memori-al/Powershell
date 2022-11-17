@@ -5,6 +5,14 @@
 # 회원가입 시 비밀번호를 sha256 암호화, DB 저장
 # 로그인 시 입력한 비밀번호를 sha256 암호화, DB 비밀번호와 일치 시 Login Success.
 # Authentication 기능은 인트라넷 특성상 DBMS 사용이 용이하지 않고, 데이터 수가 적으므로 csv 혹은 txt 방식의 DB 를 사용함.
+# Plain Text > BASE64 인코딩 > 문자열 난독화
+# 가나다라마바사 > 6rCA64KY64uk652866eI67CU7IKs > %a% %hlk% %Clpok% %0902% %solf% %alsdpo% %dmflv% %rmrp% %anjsep% %Tlqejr% %dkaaa% ... %dlfo%
+# 난독화 데이터에 전자서명을 추가해 본인 소유 외 데이터 복호화 불가하게 설계
+# 전자서명은 사용자명 난독화 후 임의의 배열에 삽입, 배열 위치는 관리자 서버에 저장
+# 사용자 정보에 대한 보안이 취약하지만, 속도가 매우 빠르기 때문에 보안 걱정이 없는 내부망에서 간단히 사용하기 용이함.
+# 보안 고려 시 설계 방안 1) 서버 구축 후 Client 에서 서버에 API 요청 시 결과 값을 반환하도록 구성.
+# 보안 고려 시 설계 방안 1-1) DBMS를 사용하지 않아도 간단히 구현이 가능함.
+# DATE [2021-08-10] #
 
 Add-type -AssemblyName System.Windows.Forms
 Add-type -AssemblyName System.drawing
