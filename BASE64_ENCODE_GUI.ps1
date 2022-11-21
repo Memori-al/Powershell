@@ -37,7 +37,7 @@ foreach ($Accounts in get-content "C:\Users\CKIRUser\Documents\aa.txt") {
 
 #로그인 체크
 function Check {
-$Load = findstr /i /c:"$IDbot.text" "C:\Users\CKIRUser\Documents\aa.txt"
+$Load = findstr /i /c:"$IDbox.text" "C:\Users\CKIRUser\Documents\aa.txt"
 foreach ($Load in get-content "C:\Users\CKIRUser\Documents\aa.txt") {
     $ID = (echo "$Load").split("")[0]
     $PW = (echo "$Load").split("")[1]
